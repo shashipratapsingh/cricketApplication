@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Match History
+        </h1>
+        <ng-container *ngIf="allMatches > 0; else noMatches">
+          <div class="row mt-5">
+            <div class="col-md-5" *ngFor="let m of allMatches; let i = index">
+              <div class="card mb-3">
+                <div class="card-header text-light bg-danger">
+                  <div class="row">
+                  <div class=""> {{ m.teamHeading }}</div>
+                 <div class=""> {{ m.status }}</div>
+                 </div>
+                </div>
+                <div class="card-body">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td><strong>Date :</strong></td>
+                        <td>{{ m.date }}</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Batting Team:</strong></td>
+                        <td>{{ m.battingTeam }}</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Batting Team Score:</strong></td>
+                        <td>{{ m.battingTeamScore }}</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Bowl Team :</strong></td>
+                        <td>{{ m.bowlTeam }}</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Bowl Team Score:</strong></td>
+                        <td>{{ m.bowlTeamScore }}</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Match Number Venue:</strong></td>
+                        <td>{{ m.matchNumberVenue }}</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Live Text:</strong></td>
+                        <td>{{ m.liveText }}</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Text Complete:</strong></td>
+                        <td>{{ m.textComplete }}</td>
+                      </tr>
+                      <!-- Add more rows for other details as needed -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #noMatches>
+          <div class="alert alert-warning mt-3" role="alert">
+            There are no live matches available.
+          </div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  

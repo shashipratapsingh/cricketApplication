@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+        <div class="col-md-12">
+            <h1>POINT TABLES</h1>
+        </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <div class="container">
+            <div class="table-responsive">
+                <div class="card">
+              <table class="table table-hover">
+                <thead class="bg-primary">
+                  <tr>
+                        @for (heading of tableHeading; track $index) {
+                        <th>{{heading}}</th>
+                        }
+                    <!-- Add more table headers as needed -->
+                  </tr>
+                </thead>
+                <tbody>
+                    @for (team of pointTable; track $index) {
+                        <tr>
+                            @if ($index>0) {
+                                @for (data of team; track $index) {
+                                        <th>{{data}}</th>
+                                }
+                            }
+                          </tr>
+                      }
+                    
+                  
+                </tbody>
+              </table>
+                </div>
+            </div>
+          </div>
+          
+    </div>
+</div>
+</div>

@@ -1,0 +1,19 @@
+/* header.component.css */
+.navbar {
+    width: 100%;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    margin-right: 20px;
+  }
+  
+  .navbar-nav .nav-link.active {
+    font-weight: bold;
+  }
+  
